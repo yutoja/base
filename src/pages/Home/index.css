@@ -1,0 +1,73 @@
+/* 头部区域 */
+.ho_header {
+  display: flex;
+  padding: 0 0.0521rem;
+  background: #233344;
+  height: 0.4167rem;
+  color: white;
+  align-items: center;
+  justify-content: space-between;
+}
+.he_ri {
+  display: flex;
+  align-items: center;
+}
+.he_ri img {
+  height: 0.2083rem;
+  width: 0.2083rem;
+  border-radius: 50%;
+  border: 0.0052rem solid wheat;
+}
+.he_ri > * {
+  margin-right: 0.0781rem;
+}
+.currrr {
+  cursor: pointer;
+}
+.restpa {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 200px;
+  width: 400px;
+  background: white;
+  z-index: 999;
+  border-radius: 0.026rem;
+  overflow: hidden;
+  border: 1px solid #ccc;
+}
+.testhead {
+  background-color: #42485b;
+  height: 40px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.testxiao {
+  color: white;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.imgg {
+  position: relative;
+}
+.imgg:hover .userList {
+  display: block;
+}
+.userList {
+  display: none;
+  position: absolute;
+  left: -100%;
+  top: 90%;
+}
+.userList > li {
+  height: 0.1563rem;
+  background-color: #42485b;
+  color: white;
+  border-radius: 0.026rem;
+  text-align: center;
+  padding: 0 0.0781rem;
+  width: 0.5208rem;
+  cursor: pointer;
+}

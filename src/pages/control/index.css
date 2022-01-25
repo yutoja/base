@@ -1,0 +1,4 @@
+.body {
+  display: flex;
+  height: calc(100vh - 0.4167rem);
+}

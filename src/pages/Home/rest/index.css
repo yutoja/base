@@ -1,0 +1,24 @@
+.rest {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.restbu {
+  background-color: rgb(24, 144, 255);
+  height: 30px;
+  width: 1.7188rem;
+  outline: none;
+  border: none;
+  color: white;
+  border-radius: 0.026rem;
+}
+.rest input {
+  outline: none;
+  border: 1px solid #ccc;
+  height: 30px;
+  padding-left: 0.0521rem;
+  margin-left: 0.0521rem;
+}
+.rest label {
+  margin: 10px 0;
+}

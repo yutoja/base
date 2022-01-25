@@ -1,0 +1,21 @@
+input {
+  outline: none;
+  border: none;
+}
+.shuru {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.0521rem;
+}
+.shuru_la {
+  padding: 0 0.0521rem;
+  background-color: white;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  height: 0.1563rem;
+  display: flex;
+}
+.shuru_la > input {
+  flex: 1;
+}

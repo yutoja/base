@@ -1,0 +1,149 @@
+* {
+  color: #9fa3b0;
+}
+.comList {
+  width: 2.0833rem;
+  border-right: 2px solid #f2f2f5;
+}
+.comhead {
+  position: relative;
+  line-height: 0.2604rem;
+  width: 2.0833rem;
+  padding-left: 0.1563rem;
+  box-sizing: border-box;
+  border-bottom: 2px solid #f2f2f5;
+  display: flex;
+  justify-content: space-between;
+}
+.icon-tianjia {
+  margin-right: 0.0521rem;
+}
+.tianjia {
+  position: absolute;
+  right: 0;
+}
+.tianjia > input {
+  padding-left: 0.0521rem;
+  outline: none;
+  border: none;
+}
+.dahe {
+  color: #676e80;
+}
+.image {
+  height: 0.2865rem;
+  width: 0.2865rem;
+  border-radius: 0.5208rem;
+  margin-right: 0.1042rem;
+}
+.liul {
+  overflow-y: auto;
+  height: 4.2448rem;
+}
+.liul > li {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  height: 0.4948rem;
+  padding-left: 0.1979rem;
+  box-sizing: border-box;
+  align-items: center;
+}
+.chee {
+  background: #f2f5fa;
+}
+/* 滚动条整体部分，其中的属性: width,height,background,border等。 */
+.yangshi::-webkit-scrollbar {
+  width: 5px;
+  /* background-color: #242424; */
+}
+/* 滚动条里面可以拖动的那部分 */
+.yangshi::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: #dddddd;
+}
+/* 聊天主题 */
+.combody {
+  flex: 1;
+}
+.bohe {
+  line-height: 0.2604rem;
+  border-bottom: 2px solid #f2f2f5;
+  text-align: center;
+  font-size: 0.1563rem;
+}
+.look {
+  height: 2.6042rem;
+  overflow-y: auto;
+  padding: 0.1563rem;
+}
+.liwo {
+  margin: 0.0781rem 0;
+}
+.looktishi {
+  text-align: center;
+}
+.liaoimh {
+  height: 0.2344rem;
+  width: 0.2344rem;
+  border-radius: 0.5208rem;
+  margin: 0 0.0521rem;
+}
+.looknei {
+  display: flex;
+  align-items: center;
+}
+.lookroun {
+  background: #f2f5fa;
+  padding: 0.0781rem;
+  border-radius: 5px;
+  max-width: 3.5417rem;
+  color: #697060;
+}
+.lookRight > .looknei {
+  display: flex;
+  justify-content: end;
+}
+.lookRight .lookroun {
+  background: #62d5c8;
+  color: white;
+}
+.send {
+  height: 1.3021rem;
+  padding: 0.0781rem;
+  border-top: 2px solid #f2f2f5;
+  box-sizing: border-box;
+}
+
+.text {
+  height: 0.8854rem;
+  width: 100%;
+  resize: none;
+  outline: none;
+  border: none;
+}
+.sends {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.seed {
+  width: 0.4167rem;
+  height: 0.1823rem;
+  outline: none;
+  border: 1px solid #d1d4db;
+  background: none;
+  border-radius: 0.5208rem;
+  margin: 0 0.1823rem;
+  cursor: pointer;
+}
+.dain::after {
+  position: absolute;
+  content: '';
+  height: 0.0521rem;
+  width: 0.0521rem;
+  background: rgb(241, 205, 205);
+  border-radius: 0.5208rem;
+  right: 0;
+  top: 0;
+}

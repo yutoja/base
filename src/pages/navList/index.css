@@ -1,0 +1,24 @@
+ul {
+  list-style: none;
+}
+.NavList {
+  width: 0.9271rem;
+  height: 100%;
+  background: #42485b;
+  color: white;
+}
+.Nav_ul > li > a {
+  padding-left: 0.1042rem;
+  line-height: 0.2604rem;
+  cursor: pointer;
+  color: white;
+  display: inline-block;
+  width: 100%;
+  text-decoration: none;
+}
+.Nav_ul > li:hover {
+  background: linear-gradient(to right, #5a8def, #5a8def 5%, #5e667e 5%, #5e667e 100%);
+}
+.casaa {
+  background: #5a8def;
+}

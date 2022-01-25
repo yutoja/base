@@ -1,13 +1,49 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  font-size: 0.1042rem;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.dohuan {
+  position: fixed;
+  top: 200px;
+  left: 50%;
+  transform: translateX(-50%);
+  line-height: 35px;
+  width: 200px;
+  background-color: white;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  padding: 0 15px 0;
+  border-radius: 20px;
+  color: #7c7c7c;
+  z-index: 99999;
+  visibility: hidden;
+}
+.dohuan > span {
+  float: right;
+  color: rgb(67, 238, 67);
+  vertical-align: middle;
+}
+.huanda {
+  animation: sadad 2s ease-in-out 1;
+}
+@keyframes sadad {
+  from {
+    visibility: visible;
+    top: 150px;
+    opacity: 1;
+  }
+  25% {
+    visibility: visible;
+    top: 125px;
+    opacity: 1;
+  }
+  to {
+    top: 50px;
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+.maxred {
+  color: red !important;
 }

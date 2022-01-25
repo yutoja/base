@@ -1,0 +1,39 @@
+.fenge {
+  margin: 0 0.0521rem;
+}
+.fenye {
+  display: flex;
+  align-items: center;
+  color: #595959;
+}
+#pet-select {
+  margin-left: 0.1042rem;
+  outline: none;
+  border: 0.0052rem solid #dfe4ea;
+  height: 0.2083rem;
+  width: 0.5729rem;
+  border-radius: 0.0104rem;
+  color: #595959;
+}
+.fenyy {
+  display: flex;
+}
+.fenKuan {
+  text-align: center;
+  line-height: 0.1979rem;
+  width: 0.1979rem;
+  color: #dfe4ea;
+  border: 0.0052rem solid #dfe4ea;
+  border-radius: 0.026rem;
+  margin-left: 0.0521rem;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+.fenKuan:hover {
+  border-color: #595959;
+  color: #595959;
+}
+.check {
+  border-color: #595959;
+  color: #595959;
+}
