@@ -13,23 +13,29 @@ export default function Zhubo(vl: any) {
   let {
     state: { id, state },
   }: any = useLocation()
+  let [a, seta] = useState(1)
   const data = get('socketId')
   let yong = useRef(document.createElement('div'))
   let [value, setvalue] = useState('')
-
+  let [huo, setHuo] = useState(true)
   let [date, setData] = useState([])
   useEffect(() => {
     getUser(id).then(({ data: { data } }) => {
       user = data[0]
     })
     // 获取聊天信息
-    getchat(id, data.id, 10, 0).then(({ data }: any) => {
+    getchat(id, data.id, date.length ? date.length + 1 : 10, 0).then(({ data }: any) => {
       setData((value) => {
         const { scrollTop, clientHeight, scrollHeight } = yong.current
         // 判断是否获取新数据后滚动
         if (scrollHeight - (scrollTop + clientHeight) < 30) {
           Promise.resolve().then((value) => {
             yong.current.scrollTop = yong.current.scrollHeight
+          })
+        } else {
+          // 聊天页面卷入长度不变
+          Promise.resolve().then((value) => {
+            yong.current.scrollTop = scrollTop
           })
         }
         return data.data
@@ -54,6 +60,8 @@ export default function Zhubo(vl: any) {
         text: value,
       })
     )
+    // 发送信息回到底部
+    yong.current.scrollTop = yong.current.scrollHeight
     setvalue('')
   }
   // 监听输入框
@@ -83,12 +91,27 @@ export default function Zhubo(vl: any) {
       e.preventDefault()
     }
   }
+  // 用户滚动至顶端刷新数据
+  function liscroll(e: any) {
+    if (e.target.scrollTop == 0 && huo) {
+      setHuo(false)
+      getchat(id, data.id, 10, date.length).then(({ data }: any) => {
+        if (data.code == 200) {
+          setHuo(true)
+          setData((value) => {
+            const dat = data.data
+            return dat.concat(value)
+          })
+        }
+      })
+    }
+  }
   return (
     <>
       <div className="combody">
         <p className="bohe">{user?.nickname}</p>
         <div className="comzhu">
-          <div className="look yangshi" ref={yong}>
+          <div className="look yangshi" ref={yong} onScroll={liscroll}>
             {date.length > 0 &&
               date.map((value: any) => {
                 if (value.user == data.id) {

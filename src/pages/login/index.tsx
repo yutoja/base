@@ -28,7 +28,7 @@ function Home() {
     const { name, password }: any = count
 
     logins(name.value, password.value).then(({ data }: any) => {
-      console.log()
+      console.log(data)
       if (data.code === 200) {
         set('socketId', data.data[0])
         navigate('/home')

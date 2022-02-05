@@ -9,7 +9,8 @@ export default function Commun() {
   let [dat, setdate] = useState([])
   // 获取路由参数
   let route: any = useLocation()
-
+  // 用于控制页面是否更新
+  const [syu, setsyu] = useState(0)
   const [tiji, setTojia] = useState(false)
   // 存储指定聊天用户的焦点状态
   const [fou, setfou] = useState(false)
@@ -44,12 +45,11 @@ export default function Commun() {
   socket.onmessage = function (e) {
     const a = JSON.parse(e.data)
     // 接收者是不是自己
-    if (a.beiuser === data.id) {
+    if (a.user === data.id || (a.beiuser == data.id && a.user == Id)) {
+      return tiggId(id, 0)
+    } else {
       userList[a.user].have = true
-      tiggId(id, 0)
-    }
-    if (a.user === data.id) {
-      tiggId(id, 0)
+      setsyu(Date.now())
     }
   }
   // 跳转指定用户页面
@@ -68,10 +68,7 @@ export default function Commun() {
   }
   // 切换聊天对象
   function tiggId(id: number, n: number) {
-    let state = 0
-    if (n === 0) {
-      state = Date.now()
-    }
+    let state = n === 0 ? Date.now() : 0
     setId(id)
     userList[id] && (userList[id].have = false)
     setuserList(userList)

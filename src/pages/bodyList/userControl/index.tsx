@@ -13,6 +13,7 @@ import Asied from './Asied'
 import { getUsers, getcount, getshu } from '../../../ulits/request'
 
 import { get as gget } from '../../../ulits/storage'
+let ss = 0
 
 export default function UserControl() {
   // 获取搜索框dom元素
@@ -20,7 +21,7 @@ export default function UserControl() {
   // 用户数据
   const [da, setda] = useState([])
   // 总人数和指定用户人数
-  const [du, setdu] = useState({ users: 0, shu: 0 })
+  const [du, setdu] = useState({ users: 0, shu: ss })
   // 查看用户的索引
   const [index, setIndex] = useState(0)
   // 登录用户数据
@@ -37,7 +38,10 @@ export default function UserControl() {
           data: [a],
         },
       }) => {
-        setdu(a)
+        setdu((value: any) => {
+          value.users = a.users
+          return value
+        })
       }
     )
   }, [])
@@ -99,6 +103,7 @@ export default function UserControl() {
       getshu(inlue, data.type).then(({ data }) => {
         setdu((value) => {
           value.shu = data.data[0].reshu
+          ss = data.data[0].reshu
           return value
         })
       })
